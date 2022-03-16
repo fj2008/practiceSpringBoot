@@ -36,4 +36,5 @@ spring:
       password: 1234   
 
 file:
-  path: C:/workspace/springbootwork/upload/
+  path: /Users/ihogyeom/IdeaProjects/upload/
+
