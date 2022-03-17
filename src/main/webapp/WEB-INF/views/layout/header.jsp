@@ -31,7 +31,8 @@
 </head>
 
 <body>
-	
+	<!-- principalid 담아두기 -->
+	<input type="hidden" id="principalId" value="${principal.user.id}"/>
 	<header class="header">
 		<div class="container">
 			<a href="/" class="logo">

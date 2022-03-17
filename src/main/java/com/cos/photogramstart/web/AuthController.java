@@ -41,17 +41,10 @@ public class AuthController {
     @PostMapping("/auth/signup")
     public String signup(@Valid SignupDto signupDto, BindingResult bindingResult){
         //bindingResult 객체는 Valid에 걸린 모든 익셉션 메시지가 담긴다.
-        if(bindingResult.hasErrors()){
-            Map<String, String> errorMap= new HashMap<>();
-            for(FieldError error: bindingResult.getFieldErrors()){
-                errorMap.put(error.getField(),error.getDefaultMessage());
-            }
-            throw new CustomValidationException("유효성검사 실패", errorMap);
-        }else{
-            User user = signupDto.toEntity();
-            authService.회원가입(user);
-            return "auth/signin";
-        }
+        User user = signupDto.toEntity();
+        authService.회원가입(user);
+        return "auth/signin";
+
 
     }
 

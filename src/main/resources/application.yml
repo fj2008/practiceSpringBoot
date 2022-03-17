@@ -33,7 +33,17 @@ spring:
   security:
     user:
       name: test
-      password: 1234   
+      password: 1234
+
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 369805781478979
+            client-secret: 558648a778be78a1f59f82b4ebe54ecf
+            scope:
+              - public_profile
+              - email
 
 file:
   path: /Users/ihogyeom/IdeaProjects/upload/

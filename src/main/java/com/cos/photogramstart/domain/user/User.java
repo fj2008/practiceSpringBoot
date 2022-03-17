@@ -21,7 +21,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //오토 인크리먼트 전략
     private int id;
-    @Column(unique = true)
+    @Column(length = 100,unique = true) //oauth2로그인을 위해 칼럼 늘리기
     private String username;
 
     @Column(nullable = false)
